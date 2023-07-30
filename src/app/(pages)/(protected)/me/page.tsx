@@ -3,7 +3,6 @@ import appwriteAuth from "@/appwrite/appwriteAuth";
 import { avatars } from "@/appwrite/config";
 import useAuth from "@/context/useAuth";
 import { Models } from "appwrite";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -22,7 +21,7 @@ const Page = () => {
     <div className="h-[80vh] w-[80vw] p-10 mx-auto">
       <div className="flex bg-gray-800 rounded-lg text-white w-full h-2/3 items-center justify-center space-x-10">
         <div>
-          <Image
+          <img
             src={avatar}
             alt="Profile picture"
             className="rounded-full w-52 h-52"

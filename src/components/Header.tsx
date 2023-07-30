@@ -1,5 +1,4 @@
 "use client";
-import appwriteAuth from "@/appwrite/appwriteAuth";
 import useAuth from "@/context/useAuth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

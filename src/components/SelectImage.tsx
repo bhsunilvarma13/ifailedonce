@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 
 function SelectImage({ file, setFile }: any) {
@@ -52,7 +51,7 @@ function SelectImage({ file, setFile }: any) {
         </label>
       ) : (
         <div className="z-0 relative w-full rounded-lg h-64 overflow-hidden">
-          <Image
+          <img
             src={image}
             alt="banner-image"
             className="w-full h-full object-cover"
