@@ -1,6 +1,7 @@
 "use client";
 import appwriteAuth from "@/appwrite/appwriteAuth";
 import useAuth from "@/context/useAuth";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState, FormEvent } from "react";
@@ -77,11 +78,11 @@ function Login() {
         onClick={google}
         className="p-2 bg-gray-900 text-white text-lg font-light rounded-md flex items-center justify-center space-x-2"
       >
-        <img src="google-icon.svg" alt="google-icon" className="w-6 h-6" />
+        <Image src="google-icon.svg" alt="google-icon" className="w-6 h-6" />
         <span>Login with Google</span>
       </button>
       <p className="text-gray-500">
-        Don't have an account?{" "}
+        Dont have an account?{" "}
         <Link className="text-gray-800 underline" href="/signup">
           Click here
         </Link>

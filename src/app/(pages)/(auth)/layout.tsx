@@ -19,7 +19,7 @@ export default function RootLayout({
     if (authStatus) {
       router.replace("/");
     }
-  }, []);
+  }, [authStatus, router]);
 
   return children;
 }

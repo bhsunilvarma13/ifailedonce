@@ -3,7 +3,7 @@ import BlogContent from "@/components/BlogContent";
 import { useParams } from "next/navigation";
 import React from "react";
 
-const Page = async () => {
+const Page = () => {
   const params = useParams();
   return (
     <div>

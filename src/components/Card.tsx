@@ -1,5 +1,6 @@
 import appwriteStorage from "@/appwrite/appwriteStorage";
 import conf from "@/conf/config";
+import Image from "next/image";
 
 const Card = async ({ data }: { data: any }) => {
   const img = (
@@ -12,11 +13,13 @@ const Card = async ({ data }: { data: any }) => {
   const date = new Date(data.timestamp);
   return (
     <div className="bg-gray-800 h-[40vh] cursor-pointer rounded-lg border-4 border-gray-800 overflow-clip">
-      <img
-        src={img}
-        alt="banner-image"
-        className="h-2/3 w-full rounded-lg object-cover"
-      />
+      {img && (
+        <Image
+          src={img}
+          alt="banner-image"
+          className="h-2/3 w-full rounded-lg object-cover"
+        />
+      )}
       <div className="h-1/3 w-full text-white p-2">
         <div className="space-y-1">
           <p className="text-gray-300">

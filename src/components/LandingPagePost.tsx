@@ -3,6 +3,7 @@ import appwriteStorage from "@/appwrite/appwriteStorage";
 import conf from "@/conf/config";
 import { Query } from "../appwrite/config";
 import Link from "next/link";
+import Image from "next/image";
 
 const LandingPagePost = async () => {
   const post = await appwriteDB.listDocuments({
@@ -23,11 +24,13 @@ const LandingPagePost = async () => {
   return (
     <Link href={"/blog/" + post.documents[0].$id}>
       <div className="cursor-pointer relative border-8 bg-gray-800 border-gray-800 h-[88vh] rounded-lg overflow-clip mx-auto">
-        <img
-          src={img}
-          alt="banner-image"
-          className="w-full h-2/3 rounded-lg object-cover"
-        />
+        {img && (
+          <Image
+            src={img}
+            alt="banner-image"
+            className="w-full h-2/3 rounded-lg object-cover"
+          />
+        )}
         <div className="w-full h-1/3 text-white">
           <div className="p-10 space-y-2">
             <p className="text-lg font-light text-gray-300">
