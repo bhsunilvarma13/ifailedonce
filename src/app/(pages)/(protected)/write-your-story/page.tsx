@@ -29,7 +29,7 @@ function Page() {
   const id = ID.unique();
 
   useEffect(() => {
-    appwriteAuth.getCurrentUser().then((res) => setUser(res!.name));
+    appwriteAuth.getCurrentUser()?.then((res) => setUser(res!.name));
   }, []);
 
   const handleClick = () => {
