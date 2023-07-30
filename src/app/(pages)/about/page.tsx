@@ -84,8 +84,8 @@ function Page() {
         </p>
         <p>
           Come, wander through the labyrinth of greatness gone astray with us.
-          Embrace the beauty of imperfection, and let's celebrate the flawed yet
-          glorious path to becoming truly exceptional!
+          Embrace the beauty of imperfection, and let&apos;s celebrate the
+          flawed yet glorious path to becoming truly exceptional!
         </p>
       </div>
     </div>
