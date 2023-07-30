@@ -29,7 +29,10 @@ class AppwriteAuth {
 
   async createGoogleSession() {
     try {
-      return account.createOAuth2Session("google", "http://localhost:3000/");
+      return account.createOAuth2Session(
+        "google",
+        "https://ifailedonce.vercel.app/"
+      );
     } catch (error: any) {
       throw error;
     }
