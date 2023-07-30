@@ -7,21 +7,21 @@ function Page() {
       <div className="space-y-5 text-lg">
         <p>
           Once upon a time, in a quaint little town nestled amidst the hills,
-          there lived an inquisitive young soul named Alex. Unlike others who
-          sought the glory of success, Alex had a peculiar fascination with the
+          there lived an inquisitive young soul named Sunil. Unlike others who
+          sought the glory of success, Sunil had a peculiar fascination with the
           underbelly of greatness - the mishaps, the stumbles, and the
           embarrassing blunders that famous figures tried so hard to conceal.
         </p>
         <p>
           As the years passed, this fascination grew into an insatiable hunger
-          for stories that delved into the human side of history. Alex often
+          for stories that delved into the human side of history. Sunil often
           wondered, "What happens when the untouchable giants falter? What
           lessons can we learn from their failures? Why do we shy away from
           discussing these captivating tales of humanity's most brilliant minds
           gone awry?"
         </p>
         <p>
-          One fateful evening, while sipping on a cup of steaming tea, Alex had
+          One fateful evening, while sipping on a cup of steaming tea, Sunil had
           an epiphany. "Why not create a sanctuary where the tales of failure,
           folly, and misjudgment can be unveiled? A place where we celebrate
           humanity's capacity to grow, learn, and rise again from the depths of
@@ -29,7 +29,7 @@ function Page() {
           can teach us, inspire us, and make us better."
         </p>
         <p>
-          And so, "Fumbles and Foibles" was born - a blog-site dedicated to
+          And so, "IFailedOnce" was born - a blog-site dedicated to
           uncovering the untold stories of failures and faux pas of famous
           people, incidents, and historical events. It became a virtual haven
           where readers could journey through the annals of time and witness the
@@ -58,7 +58,7 @@ function Page() {
           towards excellence.
         </p>
         <p>
-          "Fumbles and Foibles" teaches us the importance of humility, empathy,
+          "IFailedOnce" teaches us the importance of humility, empathy,
           and understanding. It invites us to embrace our own imperfections,
           knowing that even the most remarkable individuals had their share of
           slip-ups. Through their stories, we find comfort in our humanity and
@@ -78,7 +78,7 @@ function Page() {
           annals of time, where we unravel the hidden gems concealed within the
           folds of history's failures. Together, let's celebrate the indomitable
           spirit of humanity and learn from the lessons that our past offers us.
-          Let "Fumbles and Foibles" be your guiding light towards a brighter and
+          Let "IFailedOnce" be your guiding light towards a brighter and
           more compassionate future.
         </p>
         <p>
