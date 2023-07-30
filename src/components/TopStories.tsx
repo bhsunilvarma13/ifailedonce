@@ -15,8 +15,8 @@ const TopStories = async () => {
   return (
     <div className="w-full h-[80vh] grid grid-cols-3 grid-rows-2 gap-5 mb-10">
       {posts.documents.map((post) => (
-        <Link href={"/blog/" + post.$id}>
-          <Card key={post.$id} data={post} />
+        <Link key={post.$id} href={"/blog/" + post.$id}>
+          <Card data={post} />
         </Link>
       ))}
     </div>
