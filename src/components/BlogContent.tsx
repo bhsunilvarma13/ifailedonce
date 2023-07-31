@@ -3,26 +3,32 @@ import appwriteStorage from "@/appwrite/appwriteStorage";
 import conf from "@/conf/config";
 import React from "react";
 
-const BlogContent = async ({ id }: { id: any }) => {
-  const post = await appwriteDB.getDocument({
+const getPost = async (id: any) => {
+  return await appwriteDB.getDocument({
     databaseID: conf.appwriteDatabaseId,
     collectionID: conf.appwriteCollectionId,
     documentID: id,
   });
+};
 
-  const img = (
-    await appwriteStorage.getFileView({
-      bucketID: conf.appwriteStorageId,
-      fileID: id,
-    })
-  )?.href;
+const getImage = async (id: any) => {
+  return await appwriteStorage.getFileView({
+    bucketID: conf.appwriteStorageId,
+    fileID: id,
+  });
+};
+
+const BlogContent = async ({ id }: { id: any }) => {
+  const post = await getPost(id);
+
+  const img = await getImage(id);
 
   const date = new Date(post.timestamp);
 
   return (
     <div className="space-y-10 h-[80vh]">
       <img
-        src={img}
+        src={img?.href}
         alt="Banner Image"
         className="w-full h-[40vh] object-cover"
       />

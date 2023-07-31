@@ -9,7 +9,6 @@ const conf = {
     process.env.NEXT_PUBLIC_APPWRITE_STORAGE_COLLECTION_ID
   ),
   appwriteTeamId: String(process.env.NEXT_PUBLIC_APPWRITE_TEAMS_ID),
-  appwriteApiKey: String(process.env.NEXT_PUBLIC_APPWRITE_API_KEY),
 };
 
 export default conf;

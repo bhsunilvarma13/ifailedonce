@@ -3,14 +3,14 @@ import Card from "./Card";
 import conf from "@/conf/config";
 import { Query } from "../appwrite/config";
 import Link from "next/link";
-import { databases } from "@/appwrite/serverConfig";
+import appwriteDB from "@/appwrite/appwriteDB";
 
 const getPosts = async () => {
-  return await databases.listDocuments(
-    conf.appwriteDatabaseId,
-    conf.appwriteCollectionId,
-    [Query.orderDesc("views"), Query.limit(6)]
-  );
+  return await appwriteDB.listDocuments({
+    databaseID: conf.appwriteDatabaseId,
+    collectionID: conf.appwriteCollectionId,
+    queries: [Query.orderDesc("views"), Query.limit(6)],
+  });
 };
 
 const TopStories = async () => {
