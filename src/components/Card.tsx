@@ -1,14 +1,17 @@
 import appwriteStorage from "@/appwrite/appwriteStorage";
 import conf from "@/conf/config";
 
-const Card = async ({ data }: { data: any }) => {
-  const img = (
+const getImage = async (data: any) => {
+  return (
     await appwriteStorage.getFileView({
       bucketID: conf.appwriteStorageId,
       fileID: data.$id,
     })
   )?.href;
+};
 
+const Card = async ({ data }: { data: any }) => {
+  const img = await getImage(data);
   const date = new Date(data.timestamp);
   return (
     <div className="bg-gray-800 h-[40vh] cursor-pointer rounded-lg border-4 border-gray-800 overflow-clip">

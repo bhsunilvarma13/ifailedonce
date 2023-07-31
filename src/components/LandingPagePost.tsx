@@ -3,20 +3,29 @@ import appwriteStorage from "@/appwrite/appwriteStorage";
 import conf from "@/conf/config";
 import { Query } from "../appwrite/config";
 import Link from "next/link";
+import { Models } from "appwrite";
 
-const LandingPagePost = async () => {
-  const post = await appwriteDB.listDocuments({
+const getPost = async () => {
+  return await appwriteDB.listDocuments({
     databaseID: conf.appwriteDatabaseId,
     collectionID: conf.appwriteCollectionId,
     queries: [Query.orderDesc("views"), Query.limit(1)],
   });
+};
 
-  const img = (
+const getImage = async (post: Models.DocumentList<Models.Document>) => {
+  return (
     await appwriteStorage.getFileView({
       bucketID: conf.appwriteStorageId,
       fileID: post.documents[0].$id,
     })
   )?.href;
+};
+
+const LandingPagePost = async () => {
+  const post = await getPost();
+
+  const img = await getImage(post);
 
   const date = new Date(post.documents[0].timestamp);
 
